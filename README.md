@@ -7,8 +7,8 @@ An end-to-end time series forecasting pipeline to predict monthly retail sales u
 * **Preprocessing:** Cleaned and aggregated daily transaction logs into a structured monthly time series (`freq='M'`).
 * **Stationarity Handling:** Used an **Augmented Dickey-Fuller (ADF) test** to verify non-stationarity, then applied a **Box-Cox transformation** ($\lambda = 0$) and **first-order differencing** to stabilize variance and remove trends.
 * **Validation Split:** Evaluated models using a strict Train/Test split (first 42 months for training, final 6 months for out-of-sample testing).
-* **Modeling:** Built and tuned **AR(1)**, **ARIMA(1,0,1)**, and **SARIMA$(1,0,1) \times (1,0,1)_{12}$** models using `statsmodels`.
-
+* **Modeling:** Built and tuned **AR(1)**, **ARIMA(1,0,1)**, and **SARIMA(1,0,1) × (1,0,1)₁₂** models using `statsmodels`.
+  
 ### 📈 Model Evaluation (Test RMSE)
 
 * **SARIMA:** **11,661.64** 🏆 *(Best Model)*
